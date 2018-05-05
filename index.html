@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TOKENMOM - Decentralized Ethereum Based TOKEN Exchange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=no, maximum-scale=1,minimum-scale=1">
+    <link rel="icon" href="img/logo/icon2.png " style="">
+    <!-- Fonts -->
+<!--    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.9/angular-material.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- All CSS files included -->
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<!--   <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular.js"></script>
+<!--    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular.min.js'></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular-cookies.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.10/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.10/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.16/angular-ui-router.min.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.17.1/angular-translate.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-interpolation-messageformat/2.17.1/angular-translate-interpolation-messageformat.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-storage-cookie/2.17.1/angular-translate-storage-cookie.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-storage-local/2.17.1/angular-translate-storage-local.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-url/2.17.1/angular-translate-loader-url.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-loader-static-files/2.17.1/angular-translate-loader-static-files.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate-handler-log/2.17.1/angular-translate-handler-log.js"></script>
+
+	
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script src='https://www.gstatic.com/firebasejs/4.10.1/firebase.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/ethjs@0.3.6/dist/ethjs.min.js'></script>
+    <script src="https://cdn.rawgit.com/SlexAxton/messageformat.js/v2.0.2/messageformat.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://unpkg.com/promise-polyfill@7.1.2/dist/promise.min.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script> -->
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngInfiniteScroll/1.3.0/ng-infinite-scroll.js"></script>
+<!--    <script src="js/ng-infinite-scroll.js"></script> -->
+
+    <style>
+
+        .xboot-menu ul li a {
+    color: #058c6c;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+    font-family: "Montserrat";
+    font-size:bold;
+    }
+
+/*     .twitter li {
+        color: white;
+    }
+
+    .twitter li a{ 
+        color: #428bca;
+    } */
+.xboot-menu ul li a:hover {
+    color: #058c6c;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+    font-family: "Montserrat";
+    cursor:pointer;
+     font-size:bold;
+
+}
+.html{
+    font-family: "Roboto,sans-serif;" !important;
+}
+.one-edge-shadow {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+       -moz-box-shadow: 0 8px 6px -6px black;
+            box-shadow: 0 8px 6px -6px black;
+}
+.xboot-menu ul li a {
+
+    margin-top: 10px;
+    font-size: 16px;
+
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #058c6c;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #058c6c;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*p{
+
+  color:#00688b;
+}*/
+.darkmode{
+  background-color: #252527 !important;
+  color: silver;
+  transition: background-color 1s;
+}
+.darkmode input[type="number"],input[type="text"]{
+  background:none !important;
+}
+.darkmode p{
+  color:silver !important;
+}
+.darkmode tr{
+  background:none !important;
+}
+.darkmode input-group-addon{
+  background:none !important;
+}
+.darkmode span{
+  background:none !important;
+
+}
+.bg_color{
+  background-color: #f4f6f9;
+}
+.footer-section{
+  background-color: #fff;
+  border-top:2px solid lightgrey;
+}
+.darkmode footer{
+  background:none !important;
+}
+.darkmode .is-sticky .main-header-area{
+  background:#252527 !important;
+}
+.darkmode select{
+  background:#252527 !important;
+}
+.darkmode .table_bg{
+  background-color: #2e2e2f !important;
+}
+.table_bg{
+  background-color: #fff;
+}
+/*tr:hover{
+  background-color: #ececf6;
+}*/
+.darkmode tr:hover{
+  background-color: #495057 !important;
+}
+/*.table-striped:hover{
+  background-color: #ececf6 !important;
+}*/
+td{
+  padding: 5px !important;
+}
+th{
+  padding:5px !important;
+}
+.text-color{
+  color:black;
+}
+.darkmode .text-color{
+  color:silver !important;
+}
+.z-index{
+  z-index: 0 !important;
+}
+/*.darkmode .z-index{
+  z-index: 1 !important;
+}*/
+/*new night mode*/
+/*@media screen only and(min-width: 780px;){
+  .z-index{
+    z-index: 2 !important;
+  }
+} */
+
+
+
+/*end*/
+
+    </style>
+</head>
+
+<body ng-app="starter" class="bg_color" id="tweet_">
+
+<div ng-controller="dashCtrl">
+  <div class="wrapper" >
+        <!-- Header area start -->
+        <header class="header-area"  style="height: 50px;border-bottom: 1px solid silver;height: 60px;">
+            <div class="main-header-area sticky-header" style="height:60px;">
+                <div class="container-fluid" style="margin-right:105px;padding: 0px;">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin:0px;padding: 0px;">
+                            <div class="logo-wrapper tokenmom-logo" style="margin:0px;padding: 0px;">
+                                <a  ui-sref="dashboard"><img src="img/logo/Token mom3.png " style="padding-left: 5px;width:165px;margin-left:7px;margin-right:7px;margin-bottom:27px;margin-top: 10px;"/></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9 hidden-xs hidden-sm" style="margin:0px;padding: 0px;">
+                            <nav class="xboot-menu">
+                                <ul class="main-menu">
+                                       <!-- <li><button id="dark"> Switch mode </button></li> -->
+                                   <li style="padding-top: 6px;">
+                                       <div>
+                                       <!--  <div style="display: inline-block;"><h6 style="color:#058c6c;position: absolute;
+    left: -39px;
+    top: 13px;">D/N</h6></div> -->
+                                       <div style="display: inline-block;">
+                                    <label class="switch">
+
+                                        <input type="checkbox" id="dark" >
+                                         <a id="theme" ng-click="changeTwitterTheme()"><i class="fa fa-sun-o" style="position: absolute;left:20px;"></i> </a>
+
+                                        <!-- <span class="slider round"></span> -->
+                                      </label>
+                                    </div>
+                                    <!-- <a id="theme">kala</a>
+                                      <div style="display: inline-block"><h6 style="color:#fff;"></h6></div> -->
+                                    </div>
+                                    </li>
+                                    <li><a href="#" ng-if="disableex">EXCHANGE</a><a ng-if="!disableex" ui-sref="dashboard">EXCHANGE</a></li>
+                                    <li><a>HELP<i class="fa fa-caret-down"></i></a>
+                                       <ul>
+                                           <li><a ui-sref="guide"><i class="fa fa-caret-right"></i> GUIDES</a></li>
+                                           <li><a ui-sref="faq"><i class="fa fa-caret-right"></i> FAQ</a></li>
+                                           <li><a onclick="document.getElementById('modal-started').style.display='block'"><i class="fa fa-caret-right"></i> GETTING STARTED</a></li>
+                                           <li><a id="etherscanAddress" href="https://etherscan.io/address/0x2a0c0dbecc7e4d658f48e01e3fa353f44050c208" target="_blank"><i class="fa fa-caret-right"></i> ETHERSCAN CONTRACT</a></li>
+                                       </ul>
+                                    </li>
+                                    <li ng-if="!generateButton"><a href="#!/create/enterPass">NEW WALLET</a></li>
+                                    <li ng-if="!generateButton"><a ui-sref="unlock">UNLOCK WALLET</a></li>
+                                    <li ng-if="generateButton"><a href="#">BALANCES<i class="fa fa-caret-down"></i></a>
+                                        <ul>
+                                            <li><a ui-sref="balances"><i class="fa fa-caret-right"></i> FULL BALANCES</a></li>
+                                            <li><a ui-sref="balancehistory"><i class="fa fa-caret-right"></i> BALANCE HISTORY</a></li>
+                                        </ul>
+                                     </li>
+                                     <li ng-if="generateButton"><a href="#">ORDERS<i class="fa fa-caret-down"></i></a>
+                                        <ul>
+                                            <li><a ui-sref="openorders"><i class="fa fa-caret-right"></i>OPEN ORDERS</a></li>
+                                            <li><a ui-sref="mytradeHistory"><i class="fa fa-caret-right"></i>TRADE HISTORY</a></li>
+                                        </ul>
+                                     </li>
+                                    <li ng-if="generateButton"><a href="#">PROFILE<i class="fa fa-caret-down"></i></a>
+                                        <ul>
+                                            <li><a ><i class="fa fa-caret-right"></i>
+                                            <div style="white-space: nowrap;width: 12em;overflow: hidden;text-overflow: ellipsis;">
+                                                WALLET:<span ng-click="openInNewTab()" id="userAddress"> {{userWallet}} </span>
+                                            </div>
+                                            </a>
+                                                <div class="copy-address" ng-click="copyUserAccAddress()" >
+                                                    <img src="img/icons/copy.png" width="20px"/>
+                                                </div>
+                                                <div class="redirectToEtherScanWallet" style="cursor:pointer" ng-click="openInNewTab()">
+                                                    <img src="img/icons/open.png" width="20px"/>
+                                                </div>
+                                            </li>
+
+                                            <li ng-click="newWallet()"><a href="#!/create/enterPass"><i class="fa fa-caret-right"></i> New Wallet</a></li>
+                                            <li ng-click="changeWallet()"><a><i class="fa fa-caret-right"></i> Change Wallet</a></li>
+                                            <li ng-click="logout()"><a href="#"><i class="fa fa-caret-right"></i> Log Out</a></li>
+                                        </ul></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+
+
+                         <!-- Mobile menu area start -->
+                        <div class="mobile-menu-area clearfix hidden-md">
+                            <nav class="mobile-menu" style="float: right;">
+                                <ul class="mobile-menu-nav" style="float:right;">
+                                    <li><a href="#" ng-if="disableex">EXCHANGE</a><a ng-if="!disableex" ui-sref="dashboard">EXCHANGE</a></li>
+                                         <li><a>HELP<i class="fa fa-caret-down"></i></a>
+                                       <ul>
+                                           <li><a ui-sref="guide"><i class="fa fa-caret-right"></i> GUIDES</a></li>
+                                           <li><a ui-sref="faq"><i class="fa fa-caret-right"></i> FAQ</a></li>
+                                           <li><a onclick="document.getElementById('modal-started').style.display='block'"><i class="fa fa-caret-right"></i> GETTING STARTED</a></li>
+                                           <li><a id="etherscanAddress" href="https://etherscan.io/address/0x2a0c0dbecc7e4d658f48e01e3fa353f44050c208" target="_blank"><i class="fa fa-caret-right"></i> ETHERSCAN CONTRACT</a></li>
+                                       </ul>
+                                    </li>
+                                     <li ng-if="!generateButton"><a href="#!/create/enterPass">NEW WALLET</a></li>
+                                    <li ng-if="!generateButton"><a ui-sref="unlock">UNLOCK WALLET</a></li>
+
+                                    <li ng-if="generateButton"><a href="#">BALANCES<i class="fa fa-caret-down"></i></a>
+                                        <ul>
+                                            <li><a ui-sref="balances"><i class="fa fa-caret-right"></i> FULL BALANCES</a></li>
+                                            <li><a ui-sref="balancehistory"><i class="fa fa-caret-right"></i> BALANCE HISTORY</a></li>
+                                         </ul>
+                                     </li>
+                                    <li ng-if="generateButton"><a href="#">PROFILE<i class="fa fa-caret-down"></i></a>
+                                        <ul>
+                                            <li><a ><i class="fa fa-caret-right"></i>
+                                            <div style="white-space: nowrap;width: 12em;overflow: hidden;text-overflow: ellipsis;">
+                                                WALLET:<span id="userAddress"> {{userWallet}} </span>
+                                            </div>
+                                            </a>
+                                                <div class="copy-address" ng-click="copyUserAccAddress()" >
+                                                    <img src="img/icons/copy.png" width="20px"/>
+                                                </div>
+                                                <div class="redirectToEtherScanWallet" style="cursor:pointer" ng-click="openInNewTab()">
+                                                    <img src="img/icons/open.png" width="20px"/>
+                                                </div>
+                                            </li>
+
+                                            <li ng-click="changeWallet()"><a ><i class="fa fa-caret-right"></i> Change Wallet</a></li>
+                                            <li ng-click="logout()"><a href="#"><i class="fa fa-caret-right"></i> Sign Out</a></li>
+					<!--
+                                        </li> -->
+
+                                </ul>
+                            </li>
+                        </ul>
+                            </nav>
+                        </div>
+                        <!-- Mobile menu area end -->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content loading-content">
+            <div loading style="text-align:center;z-index: 9999;"></div>
+          </div>
+
+        </div>
+
+
+        <div class="contact-section" style="padding-top: 25px;">
+                <div class="container-fluid" style="margin:15px;">
+                    <div class="row">
+                         <!-- <div class="col-md-12" style="margin-top: -70px;">
+                            <div class="area-heading text-center">
+                                <!-<h2 class="area-title">pircing table</h2>->
+                                <p>IDXM (formerly DVIP) and AURA unlocked and tradable!</p>
+                                <a href="#" class="btn btn-warning">Learn more..</a>
+                            </div>
+                        </div> -->
+
+    <div ui-view></div>
+
+
+<!-- Get Started Modal Window -->
+<div id="modal-started" class="modal">
+
+    <div class="modal-content mod-content animate" style="margin-top: 120px;">
+
+        <div style=" text-align: center;margin-top:10px">
+            <span onclick="document.getElementById('modal-started').style.display='none'" class="close" title="Close PopUp">&times;</span>
+
+            <div>
+                <img src="./img/services/line/2.png" width="150px">
+            </div>
+
+            <div class="starter-modal-content">
+                <h5 style="text-align:center">Welcome to Coin Exchange Market</h5>
+                <p>TOKENMOM is a decentralized exchange for trading Ethereum (ERC-20) tokens. TOKENMOM combines the speed of centralization with the security of blockchain settlement.</p>
+                <div class="row">
+                    <div class="col col-sm-6">
+                        <button class="button" onclick="document.getElementById('modal-started').style.display='none'">EXPLORE</button>
+                    </div>
+                    <div class="col col-sm-6" style="text-align: right;">
+                        <button class="button" onclick="document.getElementById('modal-started').style.display='none';window.location.href='#!/unlock';">UNLOCK WALLET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!--  -->
+
+
+          </div>
+                </div>
+            </div>
+<!--
+    </section>
+--> 
+       <!-- Page content area end -->
+        <!-- Footer section start -->
+        <footer class="footer-section" style="border-top:1px solid lightgrey;">
+            <div class="" style="padding: 30px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                            <div class="footer-about-info-area footer-top-content">
+                                <div class="footer-widget-heading">
+                                    <!-- <h4>LOGO</h4> -->
+                                    <img src="img/logo/Token mom3.png " style="width: 111px;margin-top: 17px;">
+                                    <p>All copyright &copy; <br>2018 by <a href="#" target="">TOKENMOM</a></p>
+                                    <!--<a class="logo" href="index-2.html"><img src="img/logo/logo-white.png" alt=""></a>-->
+                                </div>
+                                <div class="footer-widget-content">
+
+                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vero?</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                            <div class="footer-tags-widget-area footer-top-content">
+                                <div class="footer-widget-heading">
+                                    <h4 style="color: #6698d3">Legal Docs</h4>
+                                </div>
+                                <div class="footer-widget-content">
+                                    <ul class="footer-conatct-menu">
+                                        <li>
+                                            <a href="#" class="text-color">Terms Of Use</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-color">Privacy Policy</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-color">Disclaimer</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-color">Chat Rules</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                            <div class="footer-contact-info-area footer-top-content">
+                                <div class="footer-widget-heading">
+                                    <h4 style="color: #6698d3">contact info</h4>
+                                </div>
+                                <div class="footer-widget-content">
+
+                                    <ul class="footer-conatct-menu" style="text-transform: lowercase;">
+                                        <li>
+                                            <a href="#" class="text-color"><i class="fa fa-envelope"></i><span>Email :</span> info@tokenmom.com</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-color"><i class="fa fa-phone"></i> <span>Phone : </span> +1 123 45 678</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://tokenmom.freshdesk.com/support/solutions/" target="_blank" class="text-color"><i class="fa fa-life-ring"></i><span>support link </span></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSefBihzI5YD4kbFQMwAbsDrpGmtW_GFa_RUbY86L5FvqT_VHw/viewform" target="_blank" class="text-color"><i class="fa fa-life-ring"></i><span>list your token </span></a>
+                                        </li>
+
+                                        <li>
+                                           <div id="google_translate_element" style="float: center;"><p class="text-color">Change Language</p></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+<style>
+ul#menu li{
+  display: inline;
+}
+</style>
+
+                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                            <div class="footer-contact-info-area footer-top-content">
+                                <div class="footer-widget-heading">
+                                    <h4 style="color: #6698d3">Follows us</h4>
+                                </div>
+                                <div class="footer-widget-content">
+
+                                    <ul class="footer-conatct-menu" id="menu">
+                                        <li>
+                                            <a href="https://twitter.com/Token_Mom" target="_blank"><i class="fa fa-twitter" style="font-size: 20px;"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-facebook" style="font-size: 20px;"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-bitcoin" style="font-size: 20px;"></i></a>
+                                        </li>
+                                         <li>
+                                            <a href="#"><i class="fa fa-telegram" style="font-size: 20px;"></i></a>
+                                        </li>
+
+                                        <!-- <li>
+                                           <div id="google_translate_element" style="float: center;"><p style="color:white;">Change Language</p></div>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, multilanguagePage: true}, 'google_translate_element');
+  }
+ 
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+                        <!--<div class="col-md-3 col-sm-6">
+                            <div class="footer-top-content">
+                                <div class="footer-widget-heading">
+                                    <h3>resources</h3>
+                                </div>
+                                <div class="footer-widget-content">
+                                    <ul class="links">
+                                        <li>
+                                            <i class="fa fa-angle-right"></i>
+                                            <a href="#">Crypto Investments</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-angle-right"></i>
+                                            <a href="#">Bitcoin Analytics</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-angle-right"></i>
+                                            <a href="#">Bitcoin Exchange</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-angle-right"></i>
+                                            <a href="#">Bitcoin Mining</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-angle-right"></i>
+                                            <a href="#">Bitcoin Shopping</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="footer-social-menu list-inline">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- Footer section end -->
+    </div>
+</div>
+ <script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    //load web3 object on window load
+    window.addEventListener('load', function () {
+        if (typeof web3 !== 'undefined') {
+            console.log('Web3 Detected! ' + web3.currentProvider.constructor.name)
+            window.web3 = new Web3(web3.currentProvider);
+        } else {
+            console.log('No Web3 Detected... using HTTP Provider')
+            window.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/noapikey"));
+        }
+    });
+
+    $(function(){
+        if(window.localStorage.getItem('LoginDetails') != undefined) {
+            var loginDetails = JSON.parse(window.localStorage.getItem('LoginDetails'));
+            var loginAddress = loginDetails.address;
+            document.getElementById('userAddress').innerHTML = loginAddress;
+        } else{
+            document.getElementById('userAddress').innerHTML = "";
+        }
+    });
+
+    function copyUserAccAddress() {
+        var range = document.createRange();
+        var selection = window.getSelection();
+        range.selectNodeContents(document.getElementById('userAddress'));
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        document.execCommand("Copy");
+    }
+
+    function openInNewTab() {
+        if(window.localStorage.getItem('LoginDetails') == null){
+            console.log('User not logged-in.    ');
+        } else {
+            var login = window.localStorage.getItem('LoginDetails');
+            var loginDetails = JSON.parse(login);
+            var loginAddress = loginDetails.address;
+            var url = "https://etherscan.io/address/"+loginAddress;
+            window.open(url, '_blank');
+        }
+    }
+
+    function chngBG(that) {
+        var listClassName = document.getElementsByClassName();
+        addClass(listClassName, 'activeAnchorTag');
+        removeClass(listClassName, 'tabAnchorTag');
+        addClass(that, 'tabAnchorTag');
+        removeClass(that, 'activeAnchorTag');
+    }
+
+
+    function addClass(el, className) {
+        if (el.classList)
+           el.classList.add(className);
+        else if (!hasClass(el, className)) 
+           el.className += " " + className;
+}
+
+    function removeClass(el, className) {
+        if (el.classList)
+           el.classList.remove(className);
+        else if (hasClass(el, className))
+           el.className=el.className.replace(new RegExp('(\\s|^)' + className + '(\\s|$)'), ' ');
+}
+
+</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/scripts.js"></script>
+     <script type="text/javascript">
+    var darkEnabled = false;
+$(document).ready(function() {
+        $("#theme").on("click", switchDarkMode);
+        $("#reset").on("click", reset);
+      
+        }
+      );
+      $(document).load(function() {
+        darkEnabled = !darkEnabled;
+        console.log(darkEnabled)
+        if(darkEnabled){
+            $(".twitter-timeline").contents().find('head').append( '.p-name { color: #ffffff  !important; } ' );
+        }
+        else{
+            $(".twitter-timeline").contents().find('head').append( '.p-name { color: #000000 !important; } ' );  
+        }
+      });
+
+      function switchDarkMode(){
+        darkEnabled = !darkEnabled;
+        console.log(darkEnabled)
+        if(darkEnabled){
+          $("body").addClass("darkmode");
+          $("#theme").html('<i aria-hidden="true" class="fa fa-moon-o" style="position: absolute;left:20px;"></i>');
+          $(".twitter-timeline").contents().find('head').append( '.p-name { color: #ffffff  !important; } ' );
+        } else {
+          $("body").removeClass("darkmode");
+          $("#theme").html('<i class="fa fa-sun-o" style="position: absolute;left:20px;">');
+            $(".twitter-timeline").contents().find('head').append( '.p-name { color: #000000 !important; } ' );  
+        }
+      }
+
+      function reset(){
+        $("body").removeClass("darkmode");
+        $(".twitter-timeline").contents().find('head').append( '.p-name { color:#ffffff !important; } ' );
+      }
+</script>
+<script>
+function clear_int() {
+    setInterval(function(){
+      //console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    }, 1000);
+}
+clear_int();
+</script>
+</body>
+
+</html>
